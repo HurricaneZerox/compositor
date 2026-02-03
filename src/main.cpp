@@ -1,5 +1,8 @@
 #include <iostream>
+#include "drm.h" 
 
 int main() {
-    std::cout << "Hello, World!\n";
+    int device = drm::open_graphics_device();
+
+
 }

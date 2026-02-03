@@ -8,7 +8,7 @@
 namespace drm {
 
     inline int open_graphics_device() {
-        const char* device_path = "/dev/dri/card1";
+        const char* device_path = "/dev/dri/renderD128";
         int fd = open(device_path, O_RDWR);
 
         if (fd < 0) {

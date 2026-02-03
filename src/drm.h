@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <xf86drm.h>
+#include <xf86drmMode.h>
 
 namespace drm {
 
@@ -18,7 +19,9 @@ namespace drm {
         return fd;
     }
 
-    
+    inline void add_framebuffer(int device, int width, int height, int bitdepth) {
+        drmModeAddFB(device, width, height, 24, 32, width * 4, 0, 0);
+    } 
     
 
 }

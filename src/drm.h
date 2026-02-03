@@ -7,7 +7,7 @@
 
 namespace drm {
 
-    inline int open_graphics_device(const char* device_name) {
+    inline int open_graphics_device() {
         const char* device_path = "/dev/dri/card1";
         int fd = open(device_path, O_RDWR);
 
